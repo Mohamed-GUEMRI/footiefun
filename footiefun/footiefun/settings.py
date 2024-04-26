@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'rest_framework',
 ]
 
+AUTH_USER_MODEL = 'footiefunApplication.User'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -80,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'footie_fun_db',
         'USER': 'postgres',
-        'PASSWORD': 'system',
+        'PASSWORD': 'admin',
         'HOST': 'localhost',  # Or the hostname of your PostgreSQL server
         'PORT': '5432',       # Or the port number your PostgreSQL server is listening on
     }

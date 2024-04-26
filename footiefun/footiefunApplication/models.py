@@ -5,6 +5,7 @@ class User(models.Model):
     mail = models.EmailField(unique=True)
     num_tel = models.CharField(max_length=20)
     mot_de_passe = models.CharField(max_length=100)
+    REQUIRED_FIELDS = ['email', 'type_compte']
     TYPE_COMPTE_CHOICES = [
         ('player', 'Player'),
         ('owner', 'Owner'),

@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from .models import Reservation,Match,Tournoit
+from .models import Reservation,Match,Tournoit, Stade
+
 class ReservationSerializer (serializers.ModelSerializer):
 
     class Meta :
@@ -20,4 +21,8 @@ class TournoitSerializer (serializers.ModelSerializer):
     class Meta :
         model =Tournoit
         fields ='__all__'
-     
+
+class StadeSerializer(serializers.ModelSerializer):
+    class Meta : 
+        model=Stade
+        fields='__all__'
